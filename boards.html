@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Surfboard Review</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link href='font-awesome/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat+Subrayada:700" rel="stylesheet">
+    <link href='animate.css' rel='stylesheet' type="text/css">
+    <link href='styles.css' rel='stylesheet' type="text/css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="center">
+        <h2>View Boards:</h2>
+        #if (!($boards.isEmpty()))
+        <ul>
+          #foreach ($board in $boards)
+          <li><a href="#">$board.getName()</a></li>
+          #end
+        </ul>
+        #else
+          <p>Looks like there aren't any boards! <a href="#">Add one now</a></p>
+        #end
+      </div>
+    </div>
+  </body>
+</html>
